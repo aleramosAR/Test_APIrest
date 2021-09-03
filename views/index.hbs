@@ -1,0 +1,95 @@
+<h3 class='mb-5'>Listado de productos</h3>
+<div id='productos'></div>
+<hr class='mt-5 mb-5' />
+<div class='row'>
+	<div class='col-md-4'>
+		<form onsubmit='return addProduct(this)'>
+			<fieldset class='card'>
+				<div class='card-header bg-primary text-light'>Ingresa un nuevo producto</div>
+				<div class='card-body'>
+					<div class='mb-3'>
+						<label for='title' class='form-label'>Titulo</label>
+						<input type='text' name='title' id='title' class='form-control' />
+					</div>
+					<div class='mb-3'>
+						<label for='price' class='form-label'>Precio</label>
+						<input type='number' name='price' id='price' class='form-control' />
+					</div>
+					<div class='mb-3'>
+						<label for='thumbnail' class='form-label'>Nombre de la imagen</label>
+						<input
+							type='text'
+							name='thumbnail'
+							id='thumbnail'
+							class='form-control'
+						/>
+						<small class='text-black-50'>Ingresar n&deg; desde el 01 al 16 (01,
+							02, 03, etc.)</small>
+					</div>
+					<button class='btn btn-primary float-right mt-3'>Agregar producto</button>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+	<div class='col-md-4'>
+		<div class='card-header bg-success text-light'>Actualizar producto</div>
+		<div class='mx-auto'>
+			<form onsubmit='return updateProduct(this)'>
+				<fieldset class='card'>
+					<div class='card-body'>
+						<div class='mb-3'>
+							<label for='idUp' class='form-label'>ID</label>
+							<input type='text' name='idUp' id='idUp' class='form-control' />
+						</div>
+						<div class='mb-3'>
+							<label for='titleUp' class='form-label'>Titulo</label>
+							<input
+								type='text'
+								name='titleUp'
+								id='titleUp'
+								class='form-control'
+							/>
+						</div>
+						<div class='mb-3'>
+							<label for='priceUp' class='form-label'>Precio</label>
+							<input
+								type='number'
+								name='priceUp'
+								id='priceUp'
+								class='form-control'
+							/>
+						</div>
+						<div class='mb-3'>
+							<label for='thumbnailUp' class='form-label'>Nombre de la imagen</label>
+							<input
+								type='text'
+								name='thumbnailUp'
+								id='thumbnailUp'
+								class='form-control'
+							/>
+							<small class='text-black-50'>N&deg; desde 01 a 16</small>
+						</div>
+						<button class='btn btn-success float-right mt-3'>Actualizar producto</button>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+	<div class='col-md-4'>
+		<div class='card-header bg-danger text-light'>Eliminar producto</div>
+		<div class='mx-auto'>
+			<form onsubmit='return deleteProduct(this)'>
+				<fieldset class='card'>
+					<div class='card-body'>
+						<div class='mb-3'>
+							<label for='id' class='form-label'>ID</label>
+							<input type='text' name='id' id='id' class='form-control' />
+						</div>
+						<button class='btn btn-danger float-right'>Eliminar producto</button>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+<hr class='mt-5 mb-5' />
